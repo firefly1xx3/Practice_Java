@@ -24,18 +24,6 @@ public class ComparePractice {
             System.out.println(sc);
         }
         System.out.println();
-        new SchoolChild () {
-        	@Override
-        	public int compareTo(SchoolChild sc) {
-            	if(this.getHeight() == sc.getHeight()) {
-            		return 0;
-            	} else if ( this.getHeight() > sc.getHeight()) {
-            		return 1;
-            	} else {
-            		return -1;
-            	}
-        	}
-        };
         // 先生からの指示「身長の高い順に整列しなさい」
         // create 'Comparator' anonymous class. 
         Collections.sort(classroom,new Comparator<SchoolChild> () {
@@ -90,14 +78,8 @@ class SchoolChild implements Comparable<SchoolChild>{
     public String toString() {
         return "出席番号：" + no + "　名前：" + name + "　身長：" + height;
     }
-    
+    @Override
     public int compareTo (SchoolChild sc) {
-    	if(this.no == sc.getNo()) {
-    		return 0;
-    	} else if ( this.no > sc.getNo()) {
-    		return 1;
-    	} else {
-    		return -1;
-    	}
+    	return no == sc.getNo() ? 0 : no > sc.getNo() ? 1 : -1;
     }
 }
