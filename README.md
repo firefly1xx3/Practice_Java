@@ -7,7 +7,6 @@ Java HotSpot(TM) 64-Bit Server VM (build 17.0.3.1+2-LTS-6, mixed mode, sharing) 
 
 web-app-dev-practice:
 https://skill-for-it.com/java_webapp_1/
-<br / >
 
 error => java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver 
 1. already connect between lib path and mysql-connector-***.jar.
