@@ -19,4 +19,7 @@ https://wkblog.net/jdbc%E3%83%89%E3%83%A9%E3%82%A4%E3%83%90%E3%81%8C%E8%A6%8B%E3
 
 
 Q. Is there possible existence of two or more same kinds of methods on servlet in java? <br />
-A. https://stackoverflow.com/questions/15054112/submitting-two-or-more-forms-to-the-same-servlet-iin-jsp
+A. https://stackoverflow.com/questions/15054112/submitting-two-or-more-forms-to-the-same-servlet-iin-jsp <br /> <br />
+
+Q. How to use jstl(java standard library)? <br />
+A. https://workteria.forward-soft.co.jp/blog/detail/10069 <br />
