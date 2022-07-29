@@ -23,3 +23,6 @@ A. https://stackoverflow.com/questions/15054112/submitting-two-or-more-forms-to-
 
 Q. How to use jstl(java standard library)? <br />
 A. https://workteria.forward-soft.co.jp/blog/detail/10069 <br />
+
+Q. How to get the value which is saved at session with "<c:set>" <br />
+A. https://stackoverflow.com/questions/30526726/set-session-variable-using-jstl-and-accessing-it-in-servlet-controller-class <br />
