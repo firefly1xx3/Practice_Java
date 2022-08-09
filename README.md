@@ -5,6 +5,8 @@ java 17.0.3.1 2022-04-22 LTS <br />
 Java(TM) SE Runtime Environment (build 17.0.3.1+2-LTS-6) <br />
 Java HotSpot(TM) 64-Bit Server VM (build 17.0.3.1+2-LTS-6, mixed mode, sharing) <br />
 
+if you use mac m1 chip, download jdk from here(https://www.azul.com/downloads/?os=macos&architecture=arm-64-bit&package=jdk#download-openjdk) <br />
+
 web-app-dev-practice:
 1. https://skill-for-it.com/java_webapp_1/
 2. Add account registration and some tables. 
