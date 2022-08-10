@@ -62,6 +62,7 @@ public class CreateAccountServlet extends HttpServlet {
 			// if correct, create new user and store it at DB.
 			System.out.println("before creating");
 			List<CreateUser> new_account = createAccount.create(name, password);
+			System.out.println(new_account);
 			System.out.println("after creating");
 			// save info at session.
 			/**
@@ -78,7 +79,7 @@ public class CreateAccountServlet extends HttpServlet {
 			} else {
 		        // send to the account page.
 		        RequestDispatcher dispatcher =
-						request.getRequestDispatcher("WEB-INF/jsp/account.jsp");
+						request.getRequestDispatcher("WEB-INF/jsp/login.jsp");
 				dispatcher.forward(request, response);
 			}
 		} else {

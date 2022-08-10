@@ -26,7 +26,7 @@ public class CustomerServlet extends HttpServlet {
 		SqlDao sql = new SqlDao();
 		List<Customer> customer_data = new ArrayList<Customer>();
 		// get user_id from user's session.
-		var user_id = (int)request.getSession().getAttribute("user_id");
+		var user_id = (int)request.getSession().getAttribute("userId");
 		// get all customer data.
 		customer_data = sql.get_customer_info(user_id);
 

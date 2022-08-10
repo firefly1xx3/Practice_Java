@@ -29,7 +29,7 @@ public class AccountServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		if( req.getSession().getAttribute("user_id") == null) {
+		if( req.getSession().getAttribute("userId") == null) {
 			System.out.println("there is no account on your session");
 			RequestDispatcher dispatcher =
 					req.getRequestDispatcher("WEB-INF/jsp/login.jsp");

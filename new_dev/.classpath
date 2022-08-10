@@ -6,8 +6,15 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/apache-tomcat-9.0.46 "/>
+	<classpathentry kind="lib" path="/Users/hikaruh/apache-tomcat-9.0.65/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="/Users/hikaruh/jstl/taglibs-standard-impl-1.2.5.jar"/>
+	<classpathentry kind="lib" path="/Users/hikaruh/jstl/taglibs-standard-jstlel-1.2.5.jar"/>
+	<classpathentry kind="lib" path="/Users/hikaruh/jstl/taglibs-standard-spec-1.2.5.jar"/>
+	<classpathentry kind="lib" path="/Users/hikaruh/apache-tomcat-9.0.65/bin/bootstrap.jar"/>
+	<classpathentry kind="lib" path="/Users/hikaruh/apache-tomcat-9.0.65/bin/commons-daemon.jar"/>
+	<classpathentry kind="lib" path="/Users/hikaruh/apache-tomcat-9.0.65/bin/tomcat-juli.jar"/>
+	<classpathentry kind="lib" path="/Users/hikaruh/mysql-connector-java-8.0.30/mysql-connector-java-8.0.30.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v9.0.65"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

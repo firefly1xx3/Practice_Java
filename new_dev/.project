@@ -32,17 +32,17 @@
 		<link>
 			<name>WebContent/WEB-INF/lib/bootstrap.jar</name>
 			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/apache-tomcat-9.0.46/bin/bootstrap.jar</locationURI>
+			<locationURI>PARENT-3-PROJECT_LOC/apache-tomcat-9.0.65/bin/bootstrap.jar</locationURI>
 		</link>
 		<link>
-			<name>WebContent/WEB-INF/lib/mysql-connector-java-8.0.29.jar</name>
+			<name>WebContent/WEB-INF/lib/mysql-connector-java-8.0.30.jar</name>
 			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Desktop/mysql-connector-java-8.0.29/mysql-connector-java-8.0.29.jar</locationURI>
+			<locationURI>PARENT-3-PROJECT_LOC/mysql-connector-java-8.0.30/mysql-connector-java-8.0.30.jar</locationURI>
 		</link>
 		<link>
 			<name>WebContent/WEB-INF/lib/tomcat-juli.jar</name>
 			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/apache-tomcat-9.0.46/bin/tomcat-juli.jar</locationURI>
+			<locationURI>PARENT-3-PROJECT_LOC/apache-tomcat-9.0.65/bin/tomcat-juli.jar</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

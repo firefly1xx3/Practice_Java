@@ -14,7 +14,7 @@ import dto.CreateUser;
 public class CreateAccount {
 	
 	// save db information
-	public final String file_path = "/Users/hikaru/git/Practice_Java/new_dev/DBconfig.properties";
+	public final String file_path = "/Users/hikaruh/git/Practice_Java/new_dev/DBconfig.properties";
 	DBconfig config = new DBconfig();
 	
 	public List<CreateUser> create(String user, String password) throws IOException {

@@ -17,7 +17,7 @@ import dto.LoginUser;
 
 public class SqlDao {
 	
-	public final String file_path = "/Users/hikaru/git/Practice_Java/new_dev/DBconfig.properties";
+	public final String file_path = "/Users/hikaruh/git/Practice_Java/new_dev/DBconfig.properties";
 	DBconfig config = new DBconfig();
 	
 	public List<LoginUser> check(String user, String password) throws IOException {
@@ -78,6 +78,15 @@ public class SqlDao {
 	
 	//顧客情報を取得するメソッド
 	public List<Customer> get_customer_info(int user_id) throws FileNotFoundException {
+		/**
+		 * required.
+		 */
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		String[] DbInfo = config.getDBinfo(file_path);
 		String url = DbInfo[0];
 		String db_user_name = DbInfo[1];
@@ -112,6 +121,15 @@ public class SqlDao {
 	}
 	//顧客情報を登録するメソッド
 	public void insert_customer_info(String name, String address, String phoneNumber, int user_id) throws FileNotFoundException {
+		/**
+		 * required.
+		 */
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		String[] DbInfo = config.getDBinfo(file_path);
 		String url = DbInfo[0];
 		String db_user_name = DbInfo[1];
@@ -120,7 +138,6 @@ public class SqlDao {
 		String sql = "insert into "
 				+ "customer_list(customer_name, address, phone_number, user_id) "
 				+ "values (?,?,?,?)";
-		
 		try(Connection conn = DriverManager.getConnection(url,db_user_name,db_password)){
 			conn.setAutoCommit(false);
 			try(PreparedStatement stmt = conn.prepareStatement(sql)){
@@ -128,7 +145,8 @@ public class SqlDao {
 				stmt.setString(2, address);
 				stmt.setString(3, phoneNumber);
 				stmt.setInt(4, user_id);
-				stmt.executeUpdate();
+				int result = stmt.executeUpdate();
+				System.out.println(result);
 			} catch(Exception e) {
 				// when something goes wrong, roll back before all commits.
 				conn.rollback();

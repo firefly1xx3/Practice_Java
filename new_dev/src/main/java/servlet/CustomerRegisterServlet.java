@@ -48,7 +48,7 @@ public class CustomerRegisterServlet extends HttpServlet {
 		SqlDao sql = new SqlDao();
 		
 		// get user id from request session attribute.
-		var user_id = (int)request.getSession().getAttribute("user_id");
+		int user_id = (int)request.getSession().getAttribute("userId");
 		
 		// call the method for inserting new customer info to customer list.
 		sql.insert_customer_info(name, address, phone_number, user_id);

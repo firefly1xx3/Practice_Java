@@ -60,15 +60,9 @@ public class LoginServlet extends HttpServlet {
 	        session.setAttribute("username", login_user);
 	        session.setAttribute("userId", login_user_id);
 	        System.out.println("userId: " + request.getSession().getAttribute("userId"));
-			// Create the list of showing customer's list.
-			List<Customer> customer_data = new ArrayList<Customer>();
-			// Call GET the list of customer information.
-			customer_data = sql.get_customer_info(login_user_id);
-			// Give Request object customer list.
-			request.setAttribute("customer", customer_data);
 			// Send to new page with customer list.
 			RequestDispatcher dispatcher =
-					request.getRequestDispatcher("WEB-INF/jsp/account.jsp");
+					request.getRequestDispatcher("/AccountServlet");
 			dispatcher.forward(request, response);
 		} else {
 			// failure => go back present screen.
