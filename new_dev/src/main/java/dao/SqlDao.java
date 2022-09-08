@@ -7,7 +7,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +27,6 @@ public class SqlDao {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		
@@ -106,7 +104,7 @@ public class SqlDao {
 			// while rs.next() show "true", get customer data from result set.
 			while(rs.next()) {
 				cus = new Customer();
-				cus.setId(rs.getInt("customer_id"));
+				cus.setId(rs.getInt("id"));
 				cus.setName(rs.getString("customer_name"));
 				cus.setAddress(rs.getString("address"));
 				cus.setPhoneNumber(rs.getString("phone_number"));
@@ -116,7 +114,6 @@ public class SqlDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		System.out.println(cus_info);
 		return cus_info;
 	}
 	//顧客情報を登録するメソッド
@@ -127,26 +124,28 @@ public class SqlDao {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
+		
 		String[] DbInfo = config.getDBinfo(file_path);
 		String url = DbInfo[0];
 		String db_user_name = DbInfo[1];
 		String db_password = DbInfo[2];
 
 		String sql = "insert into "
-				+ "customer_list(customer_name, address, phone_number, user_id) "
+				+ "customer_list(customer_name, user_id, phone_number, address) "
 				+ "values (?,?,?,?)";
+		
 		try(Connection conn = DriverManager.getConnection(url,db_user_name,db_password)){
 			conn.setAutoCommit(false);
 			try(PreparedStatement stmt = conn.prepareStatement(sql)){
 				stmt.setString(1, name);
-				stmt.setString(2, address);
+				stmt.setInt(2, user_id);
 				stmt.setString(3, phoneNumber);
-				stmt.setInt(4, user_id);
+				stmt.setString(4, address);
 				int result = stmt.executeUpdate();
-				System.out.println(result);
+				conn.commit();
+				System.out.println("result: " + result);
 			} catch(Exception e) {
 				// when something goes wrong, roll back before all commits.
 				conn.rollback();

@@ -5,7 +5,7 @@ create table user
 	id int not null primary key auto_increment,
 	name varchar(20) not null,
 	password varchar(20) not null,
-	birth_date DATE,
+	date_of_birth DATE,
     phone_number varchar(20),
     email varchar(255),
 	created_at DATETIME DEFAULT CURRENT_TIMESTAMP,

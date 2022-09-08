@@ -5,22 +5,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 	<title>Account page</title>
 </head>
 <body>
-<!-- These three steps are necessary for converting integer to String in java -->
-	<!-- The way to get the value which is from session. -->
-	<% if (request.getSession().getAttribute("userId") == null){ %>
-			<h1> userId </h1>
-			<h1>ログイン情報がありません。先にログインしてください。</h1>
-			<h3>３秒後にログインページに戻ります。</h3>
-			<meta http-equiv="refresh" content="3;URL=/new_dev/LoginServlet">
-			<%-- <% response.sendRedirect("LoginServlet"); %> --%>
-	<%  }
-	else { %>
-			<h1>マイページ</h1>
+	<div class="mx-auto" style="width: 500px;">
+		<div class="mb-3 text-center"> 
+			<h1> Profile Page </h1>
+		</div>
+		<div class="mb-3 text-center">
 			<input type="button" value="顧客情報一覧" onclick="location.href='/new_dev/CustomerServlet'">
+		</div>
+		<div class="mb-3 text-center">
+			<input type="button" value="登録情報追加・修正" onclick="location.href='/new_dev/UpdateAccountInfoServlet'">
+		</div>
+		<div class="mb-3 text-center">
 			<input type="button" value="ログアウト" onclick="location.href='/new_dev/SignOutServlet'">
-	<%} %>
+		</div>
+	</div>
 </body>
 </html>

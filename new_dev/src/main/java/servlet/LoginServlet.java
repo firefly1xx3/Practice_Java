@@ -29,7 +29,7 @@ public class LoginServlet extends HttpServlet {
 				request.getRequestDispatcher("WEB-INF/jsp/login.jsp");
 		dispatcher.forward(request, response);
 	}
-
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		// set character code
@@ -48,7 +48,7 @@ public class LoginServlet extends HttpServlet {
 		String login_user = login.get(0).getName();
 		String login_pass = login.get(0).getPassword();
 		int login_user_id = login.get(0).getId();
-	
+		
 		/**
 		 *  If login method does not work correctly, 
 		 * 	the program get "no user" at user's value.
